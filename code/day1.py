@@ -1,6 +1,4 @@
 import numpy as np
-from cryptography.fernet import Fernet
-
 
 
 # a)

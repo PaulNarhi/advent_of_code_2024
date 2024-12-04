@@ -3,14 +3,14 @@ import re
 
 # a)
 
-file = open('input_day3.txt', 'r')
+file = open('./input/input_day3.txt', 'r')
 content = file.read()
 commands = re.findall(f"mul\(\d+,\d+\)", content)
 print(commands)
 #print(sum([int(i.split(",")[0][4:]) * int(i.split(",")[1][:-1]) for i in commands]))
 
 # b)
-file = open('input_day3.txt', 'r')
+file = open('./input/input_day3.txt', 'r')
 content = file.read()
 commands = re.findall(f"mul\(\d+,\d+\)|do\(\)|don't\(\)", content)
 

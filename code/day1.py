@@ -1,8 +1,10 @@
 import numpy as np
+from cryptography.fernet import Fernet
+
 
 
 # a)
-file = open('input_day1.txt', 'r')
+file = open('./input/input_day1.txt', 'r')
 content = file.read()
 rows = content.split("\n")
 first_col = [int(r.split("   ")[0]) for r in rows]
@@ -10,7 +12,7 @@ second_col = [int(r.split("   ")[1]) for r in rows]
 print(np.sum(np.abs(np.subtract(np.sort(first_col), np.sort(second_col)))))
 
 # b)
-file = open('input_day1.txt', 'r')
+file = open('./input/input_day1.txt', 'r')
 content = file.read()
 rows = content.split("\n")
 first_col = [int(r.split("   ")[0]) for r in rows]

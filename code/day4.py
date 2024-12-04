@@ -3,7 +3,7 @@ import numpy as np
 
 # a)
 
-file = open('input_day4.txt', 'r')
+file = open('./input/input_day4.txt', 'r')
 content = file.read().split('\n')
 content = np.array([list(c) for c in content])
 
@@ -34,7 +34,7 @@ print(count)
 
 # b)
 
-file = open('input_day4.txt', 'r')
+file = open('./input/input_day4.txt', 'r')
 content = file.read().split('\n')
 content = np.array([list(c) for c in content])
 

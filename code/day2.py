@@ -1,7 +1,7 @@
 import numpy as np
 
 # a)
-file = open('input_day2.txt', 'r')
+file = open('./input/input_day2.txt', 'r')
 content = file.read()
 rows = content.split("\n")
 rows = [row.split(" ") for row in rows]

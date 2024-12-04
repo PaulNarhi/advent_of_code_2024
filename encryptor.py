@@ -10,18 +10,18 @@ day = sys.argv[1]
 operation = sys.argv[2]
 
 if operation == 'e':
-    with open(f'input_day{day}.txt', 'r') as file:
+    with open(f'input/input_day{day}.txt', 'r') as file:
         content = file.read()
     encMessage = fernet.encrypt(content.encode())
     # Write the encrypted content as raw bytes
-    with open(f'public_input_day{day}.txt', 'wb') as file:
+    with open(f'input/public_input_day{day}.txt', 'wb') as file:
         file.write(encMessage)
 
 elif operation == 'd':
-    with open(f'public_input_day{day}.txt', 'rb') as file:
+    with open(f'input/public_input_day{day}.txt', 'rb') as file:
         encMessage = file.read()
     decMessage = fernet.decrypt(encMessage).decode()
-    with open(f'input_day{day}.txt', 'w') as file:
+    with open(f'input/input_day{day}.txt', 'w') as file:
         file.write(decMessage)
 
 else:

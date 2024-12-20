@@ -3,7 +3,7 @@ from copy import copy
 import time
 
 
-# Example usage
+
 file_path = 'input/input_day20.txt'
 grid = {}
 with open(file_path, 'r') as file:
@@ -19,12 +19,11 @@ current = start
 visited = set()
 visited.add(current)
 dirs = [(0, 1), (0, -1), (1, 0), (-1, 0)]
-# set scores as copy of grid with inf as default value
+
 scores = {start : 0}
 
 
 while grid[current] != 'E':
-    # find next dot
     for d in dirs:
         next_pos = (current[0] + d[0], current[1] + d[1])
         if grid[next_pos] in ['.', 'E', 'S'] and next_pos not in visited:
